@@ -3,27 +3,39 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Icecream</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Titan+One&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./css/normalize.css" />
     <link rel="stylesheet" href="./css/main.min.css" />
   </head>
   <body>
     <div class="wrapper">
-      <head>
+      <header class="header">
         <div class="container">
-          <a class="link logo" href=""></a>
-          <nav>
-            <ul class="list">
-              <li><a class="link" href="">Home</a></li>
-              <li><a class="link" href="">About us</a></li>
-              <li><a class="link" href="">How it’s made?</a></li>
-              <li><a class="link" href="">Our products</a></li>
-              <li><a class="link" href="">Contact</a></li>
-            </ul>
-            <button>Buy now</button>
-          </nav>
+          <a class="link logo" href=""><img class="image" src="./img/logo 1.svg" alt="" /></a>
+          <button class="menu-button" type="button" data-menu-button aria-expanded="false">
+            <svg width="20px" height="20px">
+              <use class="burger-icon" href="./img/sprite.svg#icon-burger"></use>
+              <use class="close-icon" href="./img/sprite.svg#icon-close"></use>
+            </svg>
+          </button>
+          <div class="menu" data-menu>
+            <nav class="navigation">
+              <ul class="list">
+                <li class="list-item"><a class="link current" href="">Home</a></li>
+                <li class="list-item"><a class="link" href="">About us</a></li>
+                <li class="list-item"><a class="link" href="">How it’s made?</a></li>
+                <li class="list-item"><a class="link" href="">Our products</a></li>
+                <li class="list-item"><a class="link" href="">Contact</a></li>
+              </ul>
+            </nav>
+            <button class="button reverse">Buy now</button>
+          </div>
         </div>
-      </head>
+      </header>
       <main>
         <!-- Hero -->
         <section class="hero">
@@ -80,7 +92,7 @@
           </div>
         </section>
         <!-- How it’s made? -->
-        <section class="how-its-made">
+        <!-- <section class="how-its-made">
           <div class="container">
             <h2 class="section-header">tradition and love <span class="accent">how it’s made?</span></h2>
             <img class="image" src="" alt="" />
@@ -139,9 +151,9 @@
               </li>
             </ul>
           </div>
-        </section>
+        </section> -->
         <!-- Contacts -->
-        <section class="contacts">
+        <!-- <section class="contacts">
           <div class="container">
             <ul class="list">
               <li>
@@ -181,9 +193,9 @@
             <a class="link" href="">Our Locations</a>
             <a class="link" href="">Franchise</a>
           </div>
-        </section>
+        </section> -->
       </main>
-      <footer>
+      <!-- <footer>
         <div class="container">
           <p>homemade ice cream made<span class="accent">with passion</span></p>
           <ul class="list">
@@ -201,7 +213,8 @@
           </ul>
           <p>Feel free to contact<a class="link" href="tel:+610383766284">+61 (0) 383 766 284</a></p>
         </div>
-      </footer>
+      </footer> -->
     </div>
+    <script src="./js/menu.js"></script>
   </body>
 </html>

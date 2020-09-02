@@ -1,0 +1,51 @@
+.button {
+  display: block;
+  align-items: baseline;
+  color: $button-text-color;
+  background-color: $button-color;
+
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 21px;
+  //@include fonts(700, 16px, 1.313, 0.06em);
+  text-align: center;
+  border-radius: 20px;
+  border: transparent;
+  padding-top: 9px;
+  padding-right: 46px;
+  padding-bottom: 10px;
+  padding-left: 62px;
+
+  cursor: pointer;
+
+  &:active,
+  &:enabled {
+    outline: none;
+  }
+
+  // &::after {
+  //   width: 20px;
+  //   height: 20px;
+  //   content: '';
+  // }
+
+  &.reverse {
+    color: $rvs-button-text-color;
+    background-color: $rvs-button-color;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 21px;
+
+    &::after {
+      content: '';
+      display: inline-block;
+      width: 10px;
+      height: 9px;
+      background-image: url('../img/btn-sign-rvs.svg');
+      background-repeat: no-repeat;
+      background-size: contain;
+      // outline: solid 1px violet;
+      margin-left: 13px;
+    }
+  }
+}

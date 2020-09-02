@@ -23,6 +23,47 @@
   }
 }
 
+.button {
+  display: block;
+  align-items: baseline;
+  color: #ffffff;
+  background-color: #d41443;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 21px;
+  text-align: center;
+  border-radius: 20px;
+  border: transparent;
+  padding-top: 9px;
+  padding-right: 46px;
+  padding-bottom: 10px;
+  padding-left: 62px;
+  cursor: pointer;
+}
+
+.button:active, .button:enabled {
+  outline: none;
+}
+
+.button.reverse {
+  color: #d41443;
+  background-color: #ffffff;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 21px;
+}
+
+.button.reverse::after {
+  content: '';
+  display: inline-block;
+  width: 10px;
+  height: 9px;
+  background-image: url("../img/btn-sign-rvs.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-left: 13px;
+}
+
 html {
   box-sizing: border-box;
 }
@@ -36,7 +77,8 @@ html {
 }
 
 body {
-  font-family: Roboto;
+  color: #000000;
+  font-family: DM Sans;
 }
 
 h1 {
@@ -65,5 +107,164 @@ h1 {
   position: relative;
   overflow: hidden;
   width: 100%;
+}
+
+.header {
+  background-color: #ffb8ca;
+}
+
+.header .container {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media screen and (min-width: 1200px) {
+  .header .logo {
+    margin-right: 110px;
+  }
+}
+
+.header .menu-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  background-color: transparent;
+}
+
+.header .menu-button .close-icon {
+  display: none;
+}
+
+.header .menu-button:focus {
+  outline: none;
+}
+
+.header .menu-button.is-open {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 101;
+  right: 15px;
+  top: 5px;
+}
+
+.header .menu-button.is-open .close-icon {
+  display: block;
+}
+
+.header .menu-button .mobile-menu-trigger {
+  width: 20px;
+  height: 12px;
+}
+
+.header .menu-button.is-open .close-icon .mobile-menu-trigger {
+  width: 14px;
+  height: 14px;
+}
+
+.header .menu-button.is-open .burger-icon {
+  display: none;
+}
+
+@media screen and (min-width: 1200px) {
+  .header .menu-button {
+    display: none;
+  }
+}
+
+.header .menu {
+  font-weight: 700;
+  font-size: 14;
+  line-height: 1.286;
+  letter-spacing: 0.03em;
+  z-index: 100;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media screen and (max-width: 1199px) {
+  .header .menu {
+    display: flex;
+    flex-direction: column-reverse;
+    position: absolute;
+    top: 0;
+    right: 0;
+    opacity: 0;
+    visibility: hidden;
+    background-color: #e17992;
+    width: 250px;
+    height: 502px;
+    padding-top: 60px;
+    padding-bottom: 152px;
+    padding-left: 21px;
+    padding-right: 20px;
+  }
+  .header .menu.is-open {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .header .menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .header .menu .navigation {
+    display: flex;
+    align-items: center;
+    padding-right: 84px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .header .menu .list {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.header .list-item {
+  padding-top: 13px;
+  padding-bottom: 11px;
+}
+
+@media screen and (max-width: 1199px) {
+  .header .list-item {
+    border-bottom: solid 1px #e18298;
+    border-top: solid 1px #e18298;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .header .list-item:not(:last-child) {
+    margin-left: 35px;
+  }
+}
+
+.header .list-item .link {
+  color: #ffffff;
+  display: inline-block;
+}
+
+.header .list-item .link.current {
+  color: #d41443;
+}
+
+@media screen and (max-width: 1199px) {
+  .header .button.reverse {
+    margin-bottom: 20px;
+  }
 }
 /*# sourceMappingURL=main.css.map */
