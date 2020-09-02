@@ -5,9 +5,15 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    @media screen and (min-width: 768px) {
+      justify-content: center;
+    }
   }
 
   .logo {
+    @media screen and (min-width: 768px) {
+      margin-right: 280px;
+    }
     @media screen and (min-width: 1200px) {
       margin-right: 110px;
     }
@@ -61,6 +67,10 @@
 
     @media screen and (min-width: 1200px) {
       display: none;
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+      margin-right: 20px;
     }
   }
 
@@ -123,7 +133,7 @@
 
     @media screen and (min-width: 1200px) {
       &:not(:last-child) {
-        margin-left: 35px;
+        margin-right: 35px;
       }
     }
 
@@ -140,6 +150,13 @@
   .button.reverse {
     @media screen and (max-width: 1199px) {
       margin-bottom: 20px;
+    }
+    &.tablet {
+      display: none;
+      @media screen and (min-width: 768px) and (max-width: 1199px) {
+        margin-bottom: 0;
+        display: block;
+      }
     }
   }
 }
