@@ -128,26 +128,19 @@ h1 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-
-@media screen and (min-width: 768px) {
-  .header .container {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .header .logo {
-    margin-right: 280px;
-  }
+  padding-top: 6px;
 }
 
 @media screen and (min-width: 1200px) {
   .header .logo {
     margin-right: 110px;
   }
+}
+
+.header .menu-container {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
 }
 
 .header .menu-button {
@@ -269,6 +262,12 @@ h1 {
 }
 
 @media screen and (min-width: 768px) {
+  .header .menu {
+    height: 1024px;
+  }
+}
+
+@media screen and (min-width: 768px) {
   .header .menu .navigation {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -276,7 +275,7 @@ h1 {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    padding-right: 84px;
+    margin-right: 84px;
   }
 }
 
